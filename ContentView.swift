@@ -4,15 +4,15 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             VStack {
-               
+               Image("PL")
                 
                 
-                NavigationLink(destination: PremierLeagueTeams()) {
-                    Text("Premier League Teams")
-                        .padding()
-                        .background(Color.blue)
-                        .foregroundColor(.white)
-                        .cornerRadius(10)
+        NavigationLink(destination: PremierLeagueTeams()) {
+                Text("Premier League Teams")
+                    .padding()
+                    .background(Color.blue)
+                    .foregroundColor(.white)
+                    .cornerRadius(10)
                 }
                 .padding()
             }
