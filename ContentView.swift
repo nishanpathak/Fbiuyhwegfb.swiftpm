@@ -2,11 +2,28 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "soccerball")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Premier League")
+        NavigationView {
+            VStack {
+               
+                
+                
+                NavigationLink(destination: PremierLeagueTeams()) {
+                    Text("Premier League Teams")
+                        .padding()
+                        .background(Color.blue)
+                        .foregroundColor(.white)
+                        .cornerRadius(10)
+                }
+                .padding()
+            }
+            .navigationBarTitle("Premier League", displayMode: .inline)
         }
     }
 }
+
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+    }
+}
+
