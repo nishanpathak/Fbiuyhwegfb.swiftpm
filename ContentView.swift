@@ -7,12 +7,12 @@ struct ContentView: View {
                
                 
                 
-                NavigationLink(destination: PremierLeagueTeams()) {
-                    Text("Premier League Teams")
-                        .padding()
-                        .background(Color.blue)
-                        .foregroundColor(.white)
-                        .cornerRadius(10)
+        NavigationLink(destination: PremierLeagueTeams()) {
+                Text("Premier League Teams")
+                    .padding()
+                    .background(Color.blue)
+                    .foregroundColor(.white)
+                    .cornerRadius(10)
                 }
                 .padding()
             }
