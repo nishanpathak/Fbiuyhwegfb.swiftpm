@@ -6,5 +6,7 @@ struct MyApp: App {
         WindowGroup {
             ContentView()
         }
+        
     }
+    
 }
