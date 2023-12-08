@@ -2,10 +2,10 @@ import SwiftUI
 
 struct PremierLeagueTeams: View {
     let premierLeagueTeams = [
-        "Arsenal", "Aston Villa", "A.C.F Bournemouth" , "Brentford", "Brighton & Hove Albion", "Burnley",
+        "Arsenal", "Aston Villa", "Bournemouth" , "Brentford", "Brighton", "Burnley",
         "Chelsea", "Crystal Palace", "Everton", "Fulham", "Luton Town",
-        "Liverpool", "Manchester City", "Manchester United", "Newcastle United", "Nottingham Forest", "Sheffield United",
-        "Southampton", "Tottenham Hotspur", "West Ham United", "Wolverhampton Wanderers"
+        "Liverpool", "Manchester City", "Manchester United", "Newcastle", "Nottingham Forest", "Sheffield United",
+         "Tottenham", "West Ham United", "Wolves"
     ]
 
     var body: some View {
