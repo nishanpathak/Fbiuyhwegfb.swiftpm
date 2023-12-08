@@ -8,8 +8,7 @@ let headers = [
 let request = NSMutableURLRequest(url: NSURL(string: "https://api-football-beta.p.rapidapi.com/teams/statistics?team=33&season=2019&league=39")! as URL,
                                   cachePolicy: .useProtocolCachePolicy,
                                   timeoutInterval: 10.0)
-request.httpMethod = "GET"
-request.allHTTPHeaderFields = headers
+
 
 let session = URLSession.shared
 let dataTask = session.dataTask(with: request as URLRequest, completionHandler: { (data, response, error) -> Void in
@@ -20,11 +19,11 @@ let dataTask = session.dataTask(with: request as URLRequest, completionHandler: 
             print("Status Code: \(httpResponse.statusCode)")
 
             if let data = data {
-                // Handle the response data here
+                
                 print("Response Data: \(String(data: data, encoding: .utf8) ?? "")")
             }
         }
     }
 })
 
-dataTask.resume()
+
