@@ -3,6 +3,7 @@ import SwiftUI
 struct TeamStats: View {
     @State private var statusCode: Int?
     @State private var responseData: String?
+    @State private var isNavigationActive: Bool = false
 
     var body: some View {
         VStack {
@@ -13,11 +14,24 @@ struct TeamStats: View {
             if let responseData = responseData {
                 Text("Response Data: \(responseData)")
                     .padding()
+            } else {
+                Text("Loading...")
+            }
+
+            // Add NavigationLink to ContentView
+            NavigationLink(destination: ContentView(), isActive: $isNavigationActive) {
+                EmptyView()
             }
         }
         .onAppear {
             fetchData()
         }
+        .navigationBarItems(trailing:
+            Button("Go Back") {
+                // Activate the NavigationLink when the "Go Back" button is tapped
+                isNavigationActive = true
+            }
+        )
     }
 
     func fetchData() {
