@@ -1,10 +1,3 @@
-//
-//  Top Scorers.swift
-//  Fbiuyhwegfb
-//
-//  Created by Adrian Jurczenia on 12/6/23.
-//
-
 import SwiftUI
 
 class TopScorersViewModel: ObservableObject {

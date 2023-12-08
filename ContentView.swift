@@ -45,6 +45,21 @@ struct ContentView: View {
                 }
                 .navigationBarTitle("Premier League", displayMode: .inline)
             }
+        )
+    }
+
+struct DetailView: View {
+    let item: String
+
+    var body: some View {
+        Text("Detail View for \(item)")
+            .navigationTitle(item)
+    }
+}
+struct YourApp: App {
+    var body: some Scene {
+        WindowGroup {
+            ContentView()
         }
     }
 }
