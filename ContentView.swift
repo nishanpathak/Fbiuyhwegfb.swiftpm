@@ -20,7 +20,7 @@ struct ContentView: View {
         }
     }
 }
-struct ContentView_Previews: PreviewProvider {
+struct ContentViewPreview: PreviewProvider {
     static var previews: some View {
         ContentView()
     }
@@ -32,7 +32,6 @@ struct ContentView_Previews: PreviewProvider {
             List {
                 ForEach(items, id: \.self) { item in
                     Button(action: {
-                        // Navigate to a new view or perform some action
                         navigateToDetailView(item: item)
                     }) {
                         Text(item)
@@ -47,7 +46,7 @@ struct ContentView_Previews: PreviewProvider {
         NavigationLink(
             destination: DetailView(item: item),
             label: {
-                EmptyView()
+                TeamStats()
             }
         )
     }
@@ -60,8 +59,6 @@ struct DetailView: View {
             .navigationTitle(item)
     }
 }
-
-@main
 struct YourApp: App {
     var body: some Scene {
         WindowGroup {

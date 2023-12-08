@@ -22,7 +22,7 @@ class TopAssistsViewModel: ObservableObject {
     @Published var topAssists: [TopAssist] = []
 
     func fetchTopAssists() {
-        // Implementation remains the same
+    
     }
 }
 
