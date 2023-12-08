@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct TopAssistsResponse: Codable {
+struct TopAssists: Codable {
     let response: [TopAssist]
 }
 
@@ -22,7 +22,7 @@ class TopAssistsViewModel: ObservableObject {
     @Published var topAssists: [TopAssist] = []
 
     func fetchTopAssists() {
-        // Implementation remains the same
+        
     }
 }
 
@@ -38,16 +38,25 @@ struct TopAssistsView: View {
                 List(viewModel.topAssists, id: \.player.id) { topAssist in
                     Text("\(topAssist.player.firstName) \(topAssist.player.lastName)")
                 }
+
+                
+                NavigationLink(destination: ContentView()) {
+                    Text("Go to ContentView")
+                        .padding()
+                        .background(Color.blue)
+                        .foregroundColor(.white)
+                        .cornerRadius(10)
+                        .padding()
+                }
             }
-            
+        }
     }
 }
-        }
-    
-    struct TopAssistsView_Previews: PreviewProvider {
-        static var previews: some View {
-            TopAssistsView()
-        }
+
+struct TopAssistsView_Previews: PreviewProvider {
+    static var previews: some View {
+        TopAssistsView()
     }
-    
+}
+
 
